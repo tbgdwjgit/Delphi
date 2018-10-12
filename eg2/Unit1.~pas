@@ -9,6 +9,7 @@ uses
 type
   TForm1 = class(TForm)
     Button1: TButton;
+    Edit1: TEdit;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
@@ -28,10 +29,10 @@ procedure TForm1.Button1Click(Sender: TObject);
 var
   i:Integer;
 begin
-  for i := i to 10000 do
+  for i := 0 to 1000 do
   begin
     LogInfo('test.log','≤‚ ‘'+IntToStr(i));
-
+    LogInfo('test.log',Trim(Edit1.Text)+IntToStr(i));
   end;
 
 end;
